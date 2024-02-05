@@ -1,15 +1,18 @@
 name: Build docs
 
 on:
-  push:
-    paths:
-      - "**.md"
-      - docs/**
-      - .github/workflows/docs.yml
-    tags:        
-      - '*'        
-  release:
-    types: [published]
+  # push:
+  #   paths:
+  #     - "**.md"
+  #     - docs/**
+  #     - .github/workflows/docs.yml
+  #   tags:        
+  #     - '*'        
+  # release:
+  #   types: [published]
+  workflow_run:
+     workflows: ["publish"]
+     types: [completed] #requested
   workflow_dispatch:
 
 
