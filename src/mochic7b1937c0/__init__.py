@@ -1,5 +1,5 @@
 """
-bur
+bur2
 """
 
 import doctest
